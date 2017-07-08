@@ -1,5 +1,5 @@
 # code-sample
-Code-sample for Swift Motion.
+Java Code-sample for Swift Motion.
 
 It generates Fibonacci series F(n) for first n numbers.
 n is kept 10, but can be varied as the user demands.
