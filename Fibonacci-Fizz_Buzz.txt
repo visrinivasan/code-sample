@@ -1,0 +1,68 @@
+
+// class Fibonacci
+public class Fibonacci
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    
+    int n=10;
+    System.out.println("This program outputs the fibonacci of first n terms where n is iterated from 1 to 10"); 
+    System.out.println("The results are pasted in the format, 'number(i)' : 'fibonacci equivalent of i terms' - 'Print argument'");
+    
+    for(int i=1;i<=n;i++){
+      
+      System.out.print(i+" : "+fib(i)+" - ");
+      
+      //checks if fibonacci is a prime number
+      if (isPrime(fib(i))){
+       System.out.println("BuzzFizz"); 
+      }
+      
+      //checks if fibonacci is divisible by 15
+      else if (fib(i)%15==0){
+        System.out.println("FizzBuzz");
+      }
+      
+      //checks if fibonacci is divisible by 3
+      else if (fib(i)%3==0){
+       System.out.println("Buzz"); 
+      }
+      
+      //checks if fibonacci is divisible by 5
+      else if (fib(i)%5==0){
+       System.out.println("Fizz"); 
+      }
+      
+      //none of the above condition - print number as is
+      else {
+       System.out.println(fib(i)); 
+      }   
+      
+    }
+  }
+  
+  //recursive logic to calculate fibonacci series of num numbers
+  public static long fib(int num){
+    
+    if (num<=1){
+     return num; 
+    }
+    else {
+     return fib(num-1)+fib(num-2); 
+    }
+    
+  }
+  
+  //logic to check if the given number is prime or not.
+  public static boolean isPrime(long num) {
+    
+    for(int i=2;i<num;i++) {
+        if(num%i==0)
+            return false;
+    }
+    return true;
+  }
+  
+}
+
